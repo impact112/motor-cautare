@@ -1,0 +1,7 @@
+pyyaml
+asyncio
+uvicorn
+starlette
+sqlalchemy
+jinja2
+pillow
