@@ -1,6 +1,7 @@
 
 from modules.database.common import *
 from modules.database.entities.tag_relationship import tag_relationships
+from modules.database.entities.account import Account
 
 class Post( Base ):
     __tablename__ = 'posts'
@@ -9,11 +10,12 @@ class Post( Base ):
     
     title = Column( String(256), nullable = False )
     description = Column( Text )
-    #uploader_id = Column( Integer, ForeignKey('users.id') )
+    uploader_id = Column( Integer, ForeignKey('accounts.id') )
     views = Column( Integer, default = 0 )
 
     upload_ts = Column( Integer )
     edit_ts = Column( Integer )
+    visibility = Column( Integer )
 
     child_posts = relationship(
         'Post'

@@ -5,3 +5,4 @@ starlette
 sqlalchemy
 jinja2
 pillow
+itsdangerous
