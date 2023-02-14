@@ -1,6 +1,6 @@
 pyyaml
 asyncio
-uvicorn
+hypercorn
 starlette
 sqlalchemy
 jinja2

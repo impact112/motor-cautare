@@ -1,5 +1,6 @@
 
 from modules.database.common import *
+from modules.database.entities.session_token import SessionToken
 
 class Account( Base ):
     __tablename__ = 'accounts'
@@ -10,5 +11,7 @@ class Account( Base ):
 
     auth_digest = Column( String )
     registration_ts = Column( Integer )
-    power_level = Column( Integer, default = 0 )
+    session_tokens = relationship( SessionToken )
 
+    power_level = Column( Integer, default = 0 )
+    

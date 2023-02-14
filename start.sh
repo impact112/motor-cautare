@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PYTHON_EXECUTABLE="python3.10"
-UVICORN_EXECUTABLE="uvicorn"
+HYPERCORN_EXECUTABLE="hypercorn"
 VENV_DIR="venv"
 
 if [[ ! -d $VENV_DIR ]]; then
@@ -14,5 +14,5 @@ if [[ ! -d $VENV_DIR ]]; then
 fi
 
 source $VENV_DIR/bin/activate
-$UVICORN_EXECUTABLE modules.main:app 
+$HYPERCORN_EXECUTABLE modules.main:app 
 

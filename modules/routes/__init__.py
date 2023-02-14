@@ -58,7 +58,7 @@ exception_handlers = {
     
 }
 
-def get_app() -> Starlette:
+def get_app( config_data: dict ) -> Starlette:
     return Starlette(
         routes = routes,
         middleware = middleware,
